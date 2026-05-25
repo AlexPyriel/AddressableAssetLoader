@@ -1,0 +1,23 @@
+{
+  "name": "com.gdf.addressable-asset-loader",
+  "version": "1.0.0",
+  "displayName": "GDF Addressable Asset Loader",
+  "description": "Addressables base services for typed asset and prefab loading with in-flight deduplication, handle caching, and explicit unload support.",
+  "unity": "6000.0",
+  "author": {
+    "name": "GDF"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlexPyriel/AddressableAssetLoader.git"
+  },
+  "dependencies": {
+    "com.unity.addressables": "2.8.1"
+  },
+  "keywords": [
+    "addressables",
+    "asset",
+    "loader",
+    "cache"
+  ]
+}
