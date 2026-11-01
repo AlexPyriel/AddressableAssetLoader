@@ -2,7 +2,7 @@
 
 Reusable Addressables-backed base services for typed asset and prefab loading in Unity.
 
-Package name: `com.gdf.addressable-asset-loader`  
+Package name: `com.gdf.addressable-asset-loader`
 Assembly name: `GDF.AddressableAssetLoader`
 
 ## Features
@@ -22,9 +22,18 @@ Assembly name: `GDF.AddressableAssetLoader`
 
 ## Installation (UPM via Git)
 
+Add this dependency to `Packages/manifest.json`:
+
 ```json
-"com.gdf.addressable-asset-loader": "https://github.com/AlexPyriel/AddressableAssetLoader.git#v1.0.0"
+"com.gdf.addressable-asset-loader": "https://github.com/AlexPyriel/AddressableAssetLoader.git#v1.0.1"
 ```
+
+For development tracking (not recommended for production), use `#main` instead of a tag.
+
+You can also install it from Unity Package Manager:
+
+- `Window -> Package Manager -> + -> Add package from git URL...`
+- `https://github.com/AlexPyriel/AddressableAssetLoader.git#v1.0.1`
 
 ## Usage
 
@@ -54,6 +63,16 @@ builder.Register<AddressableGunLoaderService>(Lifetime.Singleton);
 
 `AddressablePrefabsLoaderService<TView>` is intended for addressable prefabs where callers want a required root component instead of the raw `GameObject`.
 
+## Assembly Definition Notes
+
+`GDF.AddressableAssetLoader` is a dedicated runtime assembly. Concrete loader subclasses live in
+the consuming project; the package exposes only the abstract bases so the DI graph stays strict
+about which asset types are available.
+
 ## Tests
 
 EditMode tests cover concurrent request deduplication, cached handle reuse, explicit unload, prefab component resolution, and invalid prefab cleanup.
+
+## License
+
+MIT. See `LICENSE.md`.

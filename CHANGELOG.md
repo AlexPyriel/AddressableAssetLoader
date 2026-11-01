@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1] - 2026-11-01
+
+### Changed
+
+- Added `LICENSE.md` (MIT) to the package root.
+- README now includes an `Assembly Definition Notes` section and a `License` footer section matching the sibling GDF packages.
+- Removed stale empty `Interfaces/` and `Internal/` directories from the package root; the actual code lives under `Runtime/`.
+
 ## [1.0.0] - 2026-05-27
 
 - Initial public release of the package.
