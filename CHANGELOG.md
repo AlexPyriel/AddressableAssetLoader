@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.2] - 2026-11-02
+
+### Fixed
+
+- Added missing `LICENSE.md.meta` so Unity no longer logs an "immutable folder has no meta" warning when the package is consumed as a UPM git dependency.
+
 ## [1.0.1] - 2026-11-01
 
 ### Changed
